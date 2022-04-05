@@ -95,7 +95,7 @@ extension ChangeRateViewController {
     }
     func decimalNumber() {
         numberFormatter.maximumFractionDigits = 2
-        numberFormatter.locale = Locale.autoupdatingCurrent
-        numberFormatter.numberStyle = .currency
+//        numberFormatter.locale = Locale.autoupdatingCurrent
+//        numberFormatter.numberStyle = .currency
     }
 }
