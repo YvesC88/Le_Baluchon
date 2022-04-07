@@ -5,12 +5,11 @@
       "scale" : "1x"
     },
     {
-      "filename" : "icon_baluchon@2x.jpg",
+      "filename" : "original.png",
       "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "filename" : "icon_baluchon@3x.jpeg",
       "idiom" : "iphone",
       "scale" : "3x"
     }
