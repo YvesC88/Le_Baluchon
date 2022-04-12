@@ -129,7 +129,11 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         placeholderLabel.sizeToFit()
         textToTranslateTextView.addSubview(placeholderLabel)
         placeholderLabel.frame.origin = CGPoint(x: 5, y: (textToTranslateTextView.font?.pointSize)! / 2)
-        placeholderLabel.textColor = UIColor.systemGray3
+        if #available(iOS 13.0, *) {
+            placeholderLabel.textColor = UIColor.systemGray3
+        } else {
+            // Fallback on earlier versions
+        }
         placeholderLabel.isHidden = !textToTranslateTextView.text.isEmpty
     }
 }

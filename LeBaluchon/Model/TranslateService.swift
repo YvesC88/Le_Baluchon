@@ -24,8 +24,14 @@ class TranslateService {
     private static var targetLangage = "en"
     private static var formatText = "text"
     
-    var apiKey = ApiKeys()
-    var placeholder = ""
+    private var apiKey = ApiKeys()
+    private var placeholder = ""
+    // dependacy removal for tests
+    private var session = URLSession(configuration: .default)
+    
+    init(session: URLSession) {
+        self.session = session
+    }
     
     private var task: URLSessionDataTask?
     
@@ -53,11 +59,8 @@ class TranslateService {
         guard let url = getUrl(for: .translate) else {
             return
         }
-        
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        
-        let session = URLSession(configuration: .default)
         task?.cancel()
         task = session.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async {

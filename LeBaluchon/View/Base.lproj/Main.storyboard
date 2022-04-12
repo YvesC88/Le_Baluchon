@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vS6-jx-mks">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -62,7 +63,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="tintColor" systemColor="systemGray2Color"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="repeat.circle.fill" catalog="system">
+                                                <state key="normal" image="arrow.up.circle" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                                 </state>
                                                 <state key="selected">
@@ -94,7 +95,7 @@
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
-                                                    <imageReference key="image" image="arrow.down.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                                    <imageReference key="image" image="arrow.down.circle" catalog="system" symbolScale="large" renderingMode="hierarchical">
                                                         <hierarchicalColors>
                                                             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color systemColor="secondaryLabelColor"/>
@@ -135,9 +136,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3D-zj-8fh">
-                                                <rect key="frame" x="363" y="315" width="30" height="30"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3D-zj-8fh">
+                                                <rect key="frame" x="367.33333333333331" y="323" width="21.333333333333314" height="22"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="xmark.circle" catalog="system"/>
                                                 <connections>
                                                     <action selector="deleteTextToTranslate" destination="6VA-pM-DS8" eventType="touchUpInside" id="ZkX-af-WLz"/>
                                                 </connections>
@@ -198,7 +200,7 @@
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Traducteur" id="YXD-5Z-IOb">
-                        <imageReference key="image" image="text.bubble.fill" catalog="system" renderingMode="hierarchical-single">
+                        <imageReference key="image" image="text.bubble" catalog="system" renderingMode="hierarchical-single">
                             <hierarchicalColors>
                                 <color red="0.69823211429999998" green="0.78154724840000001" blue="0.72156161070000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color systemColor="linkColor"/>
@@ -448,7 +450,7 @@
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Météo" id="6su-ui-da4">
-                        <imageReference key="image" image="cloud.sun.fill" catalog="system" renderingMode="hierarchical-single">
+                        <imageReference key="image" image="cloud.sun" catalog="system" renderingMode="hierarchical-single">
                             <hierarchicalColors>
                                 <color red="0.69823211429999998" green="0.78154724840000001" blue="0.72156161070000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color systemColor="systemYellowColor"/>
@@ -543,7 +545,7 @@
                                                         </constraints>
                                                         <color key="textColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="decimalPad"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -568,15 +570,16 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6n-P1-kFr">
-                                                        <rect key="frame" x="254" y="55" width="30" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6n-P1-kFr">
+                                                        <rect key="frame" x="264" y="59" width="20" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="xmark.circle" catalog="system"/>
                                                         <connections>
                                                             <action selector="deleteUserValue:" destination="zaP-9D-gIw" eventType="touchUpInside" id="hWG-oo-gev"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.69823211429999998" green="0.78154724840000001" blue="0.72156161070000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" red="0.69803921568627447" green="0.7803921568627451" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="3np-GH-9D7"/>
                                                     <constraint firstItem="3Bg-Np-dTY" firstAttribute="centerX" secondItem="1wT-3Z-Ff3" secondAttribute="centerX" id="Cr5-vw-TFF"/>
@@ -677,7 +680,7 @@
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Taux de change" id="UVb-Oy-fCm">
-                        <imageReference key="image" image="eurosign.circle.fill" catalog="system" renderingMode="hierarchical-single">
+                        <imageReference key="image" image="eurosign.circle" catalog="system" renderingMode="hierarchical-single">
                             <hierarchicalColors>
                                 <color red="0.69823211429999998" green="0.78154724840000001" blue="0.72156161070000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color systemColor="secondaryLabelColor"/>
@@ -716,7 +719,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="RAS-fg-fSD" kind="relationship" relationship="viewControllers" id="IND-Sk-XVN"/>
@@ -730,12 +732,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.down.circle" catalog="system" width="128" height="121"/>
         <image name="arrow.down.circle.fill" catalog="system" width="128" height="121"/>
         <image name="arrow.up.arrow.down.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="cloud.sun.fill" catalog="system" width="128" height="95"/>
-        <image name="eurosign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="arrow.up.circle" catalog="system" width="128" height="121"/>
+        <image name="cloud.sun" catalog="system" width="128" height="95"/>
+        <image name="eurosign.circle" catalog="system" width="128" height="121"/>
         <image name="repeat.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="text.bubble.fill" catalog="system" width="128" height="110"/>
+        <image name="text.bubble" catalog="system" width="128" height="110"/>
+        <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.69800001382827759" green="0.78200000524520874" blue="0.72200000286102295" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

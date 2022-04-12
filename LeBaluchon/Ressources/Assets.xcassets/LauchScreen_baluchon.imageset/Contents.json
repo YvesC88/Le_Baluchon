@@ -5,11 +5,11 @@
       "scale" : "1x"
     },
     {
-      "filename" : "original.png",
       "idiom" : "iphone",
       "scale" : "2x"
     },
     {
+      "filename" : "original.png",
       "idiom" : "iphone",
       "scale" : "3x"
     }

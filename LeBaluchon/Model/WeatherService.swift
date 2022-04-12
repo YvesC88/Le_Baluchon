@@ -22,7 +22,13 @@ class WeatherService {
     private static let units: String = "units"
     private static let unitsValue: String = "metric"
     
-    var apiKey = ApiKeys()
+    private var apiKey = ApiKeys()
+    // dependacy removal for tests
+    private var session = URLSession(configuration: .default)
+    
+    init(session: URLSession) {
+        self.session = session
+    }
     
     private func getUrl(for route: WeatherRoute, city: String) -> URL? {
         let cityEncoded = city.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
@@ -39,11 +45,8 @@ class WeatherService {
         guard let url = getUrl(for: .weather, city: city) else {
             return
         }
-        
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        
-        let session = URLSession(configuration: .default)
         let task = session.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {

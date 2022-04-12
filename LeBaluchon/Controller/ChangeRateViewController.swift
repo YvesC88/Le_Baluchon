@@ -8,18 +8,20 @@
 import UIKit
 
 class ChangeRateViewController: UIViewController {
+    // list of different outlets
     @IBOutlet weak var frameView: UIView!
     @IBOutlet weak var textViewUser: UITextView!
     @IBOutlet weak var textViewResult: UITextView!
     @IBOutlet weak var doneRateButton: UIButton!
     @IBOutlet weak var deleteUserValueButton: UIButton!
-    
     @IBOutlet weak var dollarRateView: UIView!
     @IBOutlet weak var rateUpdateLabel: UILabel!
     @IBOutlet weak var updatedDateDisplayLabel: UILabel!
     
+    // date and result formatting
     private var numberFormatter = NumberFormatter()
     private let dateFormatter = DateFormatter()
+    
     private let changeService = ChangeService()
     
     
@@ -40,12 +42,16 @@ class ChangeRateViewController: UIViewController {
     
     @IBAction func tappedDoneRateButton() {
         let userValueString = textViewUser.text
+        // condition if the value in euro is empty
         guard userValueString != "" else {
             self.presentAlert(message: "Saisissez une valeur")
             return
         }
-        let userValue = Float(userValueString!)
-        guard let convertedValue = changeService.calculation(value: userValue!) else { return }
+        guard let userValue = Float(userValueString!) else {
+            self.presentAlert(message: "Saisissez un nombre")
+            return
+        }
+        guard let convertedValue = changeService.calculation(value: userValue) else { return }
         textViewUser.resignFirstResponder()
         decimalNumber()
         let formattedValue = NSNumber(value: convertedValue)
