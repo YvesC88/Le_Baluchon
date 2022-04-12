@@ -103,7 +103,7 @@
 		FB395A0A27D7BC0F0069A874 = {
 			isa = PBXGroup;
 			children = (
-				FB395A1527D7BC0F0069A874 /* Le Baluchon */,
+				FB395A1527D7BC0F0069A874 /* LeBaluchon */,
 				FB395A2C27D7BC110069A874 /* Le BaluchonTests */,
 				FB395A3627D7BC120069A874 /* Le BaluchonUITests */,
 				FB395A1427D7BC0F0069A874 /* Products */,
@@ -120,7 +120,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FB395A1527D7BC0F0069A874 /* Le Baluchon */ = {
+		FB395A1527D7BC0F0069A874 /* LeBaluchon */ = {
 			isa = PBXGroup;
 			children = (
 				FB395A4F27D8FCF10069A874 /* Ressources */,
@@ -128,7 +128,6 @@
 				FB395A4E27D8FCD80069A874 /* View */,
 				FB395A4C27D8FCCE0069A874 /* Controller */,
 			);
-			name = "Le Baluchon";
 			path = LeBaluchon;
 			sourceTree = "<group>";
 		};
@@ -524,7 +523,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8ZV67K9B93;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Le Baluchon/Info.plist";
+				INFOPLIST_FILE = LeBaluchon/Ressources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -554,7 +553,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8ZV67K9B93;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Le Baluchon/Info.plist";
+				INFOPLIST_FILE = LeBaluchon/Ressources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
