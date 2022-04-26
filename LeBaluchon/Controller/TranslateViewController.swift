@@ -61,7 +61,7 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
             return
         }
         UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.9, options: [], animations: {
-            self.changeLangageButton.transform = CGAffineTransform(rotationAngle: .pi / 2)
+            self.changeLangageButton.transform = self.changeLangageButton.transform.rotated(by: CGFloat.pi)
         }, completion: nil)
         clearText()
         setupPlaceholderLabel()

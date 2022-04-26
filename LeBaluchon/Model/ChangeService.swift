@@ -45,7 +45,7 @@ class ChangeService {
         return URL(string: urlString)
     }
     
-    private func getValue(callback: @escaping (Bool, LatestRates?) -> Void) {
+    func getValue(callback: @escaping (Bool, LatestRates?) -> Void) {
         guard let url = getUrl(for: .latest) else {
             return
         }

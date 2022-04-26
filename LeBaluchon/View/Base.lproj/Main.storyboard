@@ -63,10 +63,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="tintColor" systemColor="systemGray2Color"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="selected">
-                                                    <imageReference key="image" image="rectangle.and.pencil.and.ellipsis.rtl" catalog="system" symbolScale="default"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
-                                                </state>
                                                 <connections>
                                                     <action selector="changeLangage" destination="6VA-pM-DS8" eventType="touchUpInside" id="peN-mW-txb"/>
                                                 </connections>
@@ -87,10 +83,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djh-yx-oAB">
-                                                <rect key="frame" x="348" y="375" width="30" height="70"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djh-yx-oAB">
+                                                <rect key="frame" x="358" y="375" width="20" height="70"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="Image"/>
                                                 <connections>
                                                     <action selector="tappedTranslate" destination="6VA-pM-DS8" eventType="touchUpInside" id="zXw-DH-seZ"/>
                                                 </connections>
@@ -111,7 +108,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Fo6-Fd-cIU">
-                                                <rect key="frame" x="353" y="400" width="20" height="20"/>
+                                                <rect key="frame" x="358" y="400" width="20" height="20"/>
                                                 <color key="color" red="0.69823211429999998" green="0.78154724840000001" blue="0.72156161070000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </activityIndicatorView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traduit par Google Translate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0l-lx-pcv">
@@ -123,10 +120,9 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3D-zj-8fh">
-                                                <rect key="frame" x="366.33333333333331" y="322.66666666666669" width="23.666666666666686" height="22.333333333333314"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3D-zj-8fh">
+                                                <rect key="frame" x="363" y="311" width="30" height="34"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="cross" catalog="system"/>
                                                 <connections>
                                                     <action selector="deleteTextToTranslate" destination="6VA-pM-DS8" eventType="touchUpInside" id="ZkX-af-WLz"/>
                                                 </connections>
@@ -187,11 +183,11 @@
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Traducteur" id="YXD-5Z-IOb">
-                        <imageReference key="image" image="rectangle.and.pencil.and.ellipsis" catalog="system" renderingMode="hierarchical-single">
+                        <imageReference key="image" image="person.2" catalog="system" renderingMode="hierarchical-single">
                             <hierarchicalColors>
-                                <color red="0.69823211429999998" green="0.78154724840000001" blue="0.72156161070000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color systemColor="linkColor"/>
-                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color red="0.69803921570000005" green="0.78039215689999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
@@ -233,7 +229,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="800"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKA-7x-JPR">
-                                                <rect key="frame" x="20" y="469.33333333333337" width="388" height="200"/>
+                                                <rect key="frame" x="20" y="465" width="388" height="200"/>
                                                 <subviews>
                                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xPr-Kh-Ci6">
                                                         <rect key="frame" x="10" y="66" width="32" height="34"/>
@@ -248,7 +244,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAC-41-36l">
                                                         <rect key="frame" x="10" y="10" width="57" height="36"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="bX2-hH-leD"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="bX2-hH-leD"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -284,7 +280,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcO-hl-QPp">
                                                         <rect key="frame" x="10" y="10" width="57" height="36"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="Nwq-S0-caf"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="Nwq-S0-caf"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -358,22 +354,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="G6k-u3-ILA">
-                                                <rect key="frame" x="385.66666666666669" y="444" width="20" height="20"/>
+                                                <rect key="frame" x="389.66666666666669" y="444" width="20" height="20"/>
                                                 <color key="color" red="0.69823211429999998" green="0.78154724840000001" blue="0.72156161070000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </activityIndicatorView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlJ-5A-TvP">
-                                                <rect key="frame" x="383" y="438.66666666666669" width="25" height="30.666666666666686"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlJ-5A-TvP">
+                                                <rect key="frame" x="391.33333333333331" y="443" width="16.666666666666686" height="22"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal">
-                                                    <imageReference key="image" image="hand.point.down" catalog="system" symbolScale="large" renderingMode="hierarchical">
-                                                        <hierarchicalColors>
-                                                            <color red="0.69803921570000005" green="0.78039215689999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color systemColor="tertiaryLabelColor"/>
-                                                        </hierarchicalColors>
-                                                    </imageReference>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
-                                                </state>
+                                                <state key="normal" image="arrow.down" catalog="system"/>
                                                 <connections>
                                                     <action selector="tappedDoneWeather" destination="RAS-fg-fSD" eventType="touchUpInside" id="vgc-Ik-oCD"/>
                                                 </connections>
@@ -437,10 +424,10 @@
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Météo" id="6su-ui-da4">
-                        <imageReference key="image" image="cloud.fill" catalog="system" renderingMode="hierarchical-single">
+                        <imageReference key="image" image="Symbol" renderingMode="hierarchical-single">
                             <hierarchicalColors>
-                                <color red="0.69823211429999998" green="0.78154724840000001" blue="0.72156161070000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color systemColor="systemYellowColor"/>
+                                <color red="0.69803921570000005" green="0.78039215689999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color systemColor="secondaryLabelColor"/>
                                 <color systemColor="tertiaryLabelColor"/>
                             </hierarchicalColors>
                         </imageReference>
@@ -496,13 +483,10 @@
                                                 <rect key="frame" x="20" y="158" width="388" height="300"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1h-Db-5fb">
-                                                        <rect key="frame" x="167.33333333333334" y="131.33333333333331" width="53.333333333333343" height="37.666666666666657"/>
+                                                        <rect key="frame" x="182" y="143" width="24" height="14"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain">
-                                                            <imageReference key="image" image="chevron.down" catalog="system" symbolScale="large"/>
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20" scale="large" weight="bold"/>
-                                                        </buttonConfiguration>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
                                                             <action selector="tappedDoneRateButton" destination="zaP-9D-gIw" eventType="touchUpInside" id="R8X-AZ-wNz"/>
                                                         </connections>
@@ -558,9 +542,8 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6n-P1-kFr">
-                                                        <rect key="frame" x="266.66666666666669" y="59" width="17.333333333333314" height="22"/>
+                                                        <rect key="frame" x="254" y="53" width="30" height="34"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="xmark" catalog="system"/>
                                                         <connections>
                                                             <action selector="deleteUserValue:" destination="zaP-9D-gIw" eventType="touchUpInside" id="hWG-oo-gev"/>
                                                         </connections>
@@ -666,7 +649,7 @@
                             <outletCollection property="gestureRecognizers" destination="uZN-JM-htE" appends="YES" id="jyF-2O-Txl"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Taux de change" image="fibrechannel" catalog="system" id="UVb-Oy-fCm"/>
+                    <tabBarItem key="tabBarItem" title="Taux de change" id="UVb-Oy-fCm"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="428" height="900"/>
                     <connections>
@@ -711,22 +694,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.down" catalog="system" width="128" height="72"/>
-        <image name="cloud.fill" catalog="system" width="128" height="88"/>
-        <image name="cross" catalog="system" width="128" height="116"/>
-        <image name="fibrechannel" catalog="system" width="128" height="92"/>
-        <image name="hand.point.down" catalog="system" width="111" height="128"/>
-        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
-        <image name="rectangle.and.pencil.and.ellipsis.rtl" catalog="system" width="128" height="92"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="Image" width="20" height="20"/>
+        <image name="Symbol" width="15" height="10"/>
+        <image name="arrow.down" catalog="system" width="120" height="128"/>
+        <image name="person.2" catalog="system" width="128" height="81"/>
         <namedColor name="AccentColor">
             <color red="0.69800001382827759" green="0.78200000524520874" blue="0.72200000286102295" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -742,9 +721,6 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>

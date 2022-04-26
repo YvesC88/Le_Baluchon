@@ -28,6 +28,11 @@
 		FB4DBA9727E177F900EF2A25 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DBA9627E177F900EF2A25 /* Weather.swift */; };
 		FBD29AED27E8D58600E84524 /* Translate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD29AEC27E8D58600E84524 /* Translate.swift */; };
 		FBD49D0227FBA66F00E762CC /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD49D0127FBA66F00E762CC /* ApiKeys.swift */; };
+		FBE8CD02280708C5001DB9CA /* WeatherServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE8CD01280708C5001DB9CA /* WeatherServiceTestCase.swift */; };
+		FBE8CD0428070B8F001DB9CA /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE8CD0328070B8F001DB9CA /* FakeResponseData.swift */; };
+		FBE8CD06280711E5001DB9CA /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE8CD05280711E4001DB9CA /* URLSessionFake.swift */; };
+		FBFF4B532817EB5800BC65F2 /* TranslateServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFF4B522817EB5800BC65F2 /* TranslateServiceTestCase.swift */; };
+		FBFF4B552817EB6A00BC65F2 /* ChangeServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFF4B542817EB6A00BC65F2 /* ChangeServiceTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,11 @@
 		FB6062192805B6F300BBEF64 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBD29AEC27E8D58600E84524 /* Translate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translate.swift; sourceTree = "<group>"; };
 		FBD49D0127FBA66F00E762CC /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
+		FBE8CD01280708C5001DB9CA /* WeatherServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceTestCase.swift; sourceTree = "<group>"; };
+		FBE8CD0328070B8F001DB9CA /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
+		FBE8CD05280711E4001DB9CA /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
+		FBFF4B522817EB5800BC65F2 /* TranslateServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateServiceTestCase.swift; sourceTree = "<group>"; };
+		FBFF4B542817EB6A00BC65F2 /* ChangeServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeServiceTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +145,11 @@
 			isa = PBXGroup;
 			children = (
 				FB395A2D27D7BC110069A874 /* Le_BaluchonTests.swift */,
+				FBE8CD01280708C5001DB9CA /* WeatherServiceTestCase.swift */,
+				FBFF4B522817EB5800BC65F2 /* TranslateServiceTestCase.swift */,
+				FBFF4B542817EB6A00BC65F2 /* ChangeServiceTestCase.swift */,
+				FBE8CD05280711E4001DB9CA /* URLSessionFake.swift */,
+				FBE8CD0328070B8F001DB9CA /* FakeResponseData.swift */,
 				FB220C7B28042C88000C2D1A /* Weather.json */,
 				FB220C7D28042FB9000C2D1A /* Translate.json */,
 				FB220C7F28042FD4000C2D1A /* Change.json */,
@@ -350,7 +365,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE8CD02280708C5001DB9CA /* WeatherServiceTestCase.swift in Sources */,
+				FBE8CD06280711E5001DB9CA /* URLSessionFake.swift in Sources */,
+				FBFF4B532817EB5800BC65F2 /* TranslateServiceTestCase.swift in Sources */,
 				FB395A2E27D7BC110069A874 /* Le_BaluchonTests.swift in Sources */,
+				FBE8CD0428070B8F001DB9CA /* FakeResponseData.swift in Sources */,
+				FBFF4B552817EB6A00BC65F2 /* ChangeServiceTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +451,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -449,7 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -492,7 +512,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -504,7 +524,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -530,7 +550,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,7 +580,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

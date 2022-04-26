@@ -61,7 +61,6 @@ class WeatherService {
                     let responseJSON = try JSONDecoder().decode(Weather.self, from: data)
                     callback(true, responseJSON)
                 } catch {
-                    print("\(error)")
                     callback(false, nil)
                 }
             }

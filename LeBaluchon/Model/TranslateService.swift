@@ -76,7 +76,6 @@ class TranslateService {
                     let responseJSON = try JSONDecoder().decode(Translate.self, from: data)
                     callback(true, responseJSON)
                 } catch {
-                    print("Erreur")
                     callback(false, nil)
                 }
             }
