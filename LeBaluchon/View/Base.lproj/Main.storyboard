@@ -63,6 +63,26 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="tintColor" systemColor="systemGray2Color"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="change_langage" symbolScale="large" renderingMode="hierarchical">
+                                                        <hierarchicalColors>
+                                                            <color red="0.69803921570000005" green="0.78039215689999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color red="0.69803921570000005" green="0.78039215689999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color red="0.69803921570000005" green="0.78039215689999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <imageReference key="image" image="change_langage" renderingMode="hierarchical-single">
+                                                        <hierarchicalColors>
+                                                            <color red="0.69803921570000005" green="0.78039215689999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color systemColor="secondaryLabelColor"/>
+                                                            <color systemColor="tertiaryLabelColor"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="changeLangage" destination="6VA-pM-DS8" eventType="touchUpInside" id="peN-mW-txb"/>
                                                 </connections>
@@ -84,10 +104,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djh-yx-oAB">
-                                                <rect key="frame" x="358" y="375" width="20" height="70"/>
+                                                <rect key="frame" x="367" y="375" width="11" height="70"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="Image"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="arrow.down.fill"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="tappedTranslate" destination="6VA-pM-DS8" eventType="touchUpInside" id="zXw-DH-seZ"/>
                                                 </connections>
@@ -108,7 +131,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Fo6-Fd-cIU">
-                                                <rect key="frame" x="358" y="400" width="20" height="20"/>
+                                                <rect key="frame" x="362.66666666666669" y="400" width="20" height="20"/>
                                                 <color key="color" red="0.69823211429999998" green="0.78154724840000001" blue="0.72156161070000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </activityIndicatorView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traduit par Google Translate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0l-lx-pcv">
@@ -121,8 +144,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3D-zj-8fh">
-                                                <rect key="frame" x="363" y="311" width="30" height="34"/>
+                                                <rect key="frame" x="371.66666666666669" y="323" width="13" height="22"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="clear_button" symbolScale="large"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="deleteTextToTranslate" destination="6VA-pM-DS8" eventType="touchUpInside" id="ZkX-af-WLz"/>
                                                 </connections>
@@ -182,15 +209,7 @@
                             <outletCollection property="gestureRecognizers" destination="1em-hQ-X7A" appends="YES" id="vX5-To-T00"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Traducteur" id="YXD-5Z-IOb">
-                        <imageReference key="image" image="person.2" catalog="system" renderingMode="hierarchical-single">
-                            <hierarchicalColors>
-                                <color red="0.69803921570000005" green="0.78039215689999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Traducteur" image="translate_icon" id="YXD-5Z-IOb"/>
                     <navigationItem key="navigationItem" id="mST-k4-6JZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="428" height="900"/>
@@ -354,13 +373,15 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="G6k-u3-ILA">
-                                                <rect key="frame" x="389.66666666666669" y="444" width="20" height="20"/>
+                                                <rect key="frame" x="392.66666666666669" y="444" width="20" height="20"/>
                                                 <color key="color" red="0.69823211429999998" green="0.78154724840000001" blue="0.72156161070000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </activityIndicatorView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlJ-5A-TvP">
-                                                <rect key="frame" x="391.33333333333331" y="443" width="16.666666666666686" height="22"/>
+                                                <rect key="frame" x="397" y="443" width="11" height="22"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="arrow.down" catalog="system"/>
+                                                <state key="normal" image="arrow.down.fill">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="tappedDoneWeather" destination="RAS-fg-fSD" eventType="touchUpInside" id="vgc-Ik-oCD"/>
                                                 </connections>
@@ -424,7 +445,7 @@
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Météo" id="6su-ui-da4">
-                        <imageReference key="image" image="Symbol" renderingMode="hierarchical-single">
+                        <imageReference key="image" image="weather_icon" renderingMode="hierarchical-single">
                             <hierarchicalColors>
                                 <color red="0.69803921570000005" green="0.78039215689999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color systemColor="secondaryLabelColor"/>
@@ -483,10 +504,13 @@
                                                 <rect key="frame" x="20" y="158" width="388" height="300"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1h-Db-5fb">
-                                                        <rect key="frame" x="182" y="143" width="24" height="14"/>
+                                                        <rect key="frame" x="189" y="141" width="10.333333333333343" height="18"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal">
+                                                            <imageReference key="image" image="arrow.down.fill"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="tappedDoneRateButton" destination="zaP-9D-gIw" eventType="touchUpInside" id="R8X-AZ-wNz"/>
                                                         </connections>
@@ -542,8 +566,9 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6n-P1-kFr">
-                                                        <rect key="frame" x="254" y="53" width="30" height="34"/>
+                                                        <rect key="frame" x="271" y="59" width="13" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="clear_button"/>
                                                         <connections>
                                                             <action selector="deleteUserValue:" destination="zaP-9D-gIw" eventType="touchUpInside" id="hWG-oo-gev"/>
                                                         </connections>
@@ -649,7 +674,7 @@
                             <outletCollection property="gestureRecognizers" destination="uZN-JM-htE" appends="YES" id="jyF-2O-Txl"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Taux de change" id="UVb-Oy-fCm"/>
+                    <tabBarItem key="tabBarItem" title="Taux de change" image="change_icon" id="UVb-Oy-fCm"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="428" height="900"/>
                     <connections>
@@ -694,10 +719,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="20" height="20"/>
-        <image name="Symbol" width="15" height="10"/>
-        <image name="arrow.down" catalog="system" width="120" height="128"/>
-        <image name="person.2" catalog="system" width="128" height="81"/>
+        <image name="arrow.down.fill" width="11" height="11"/>
+        <image name="change_icon" width="11" height="11"/>
+        <image name="change_langage" width="13" height="13"/>
+        <image name="clear_button" width="13" height="13"/>
+        <image name="translate_icon" width="14" height="10"/>
+        <image name="weather_icon" width="15" height="10"/>
         <namedColor name="AccentColor">
             <color red="0.69800001382827759" green="0.78200000524520874" blue="0.72200000286102295" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

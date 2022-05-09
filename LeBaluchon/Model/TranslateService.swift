@@ -18,10 +18,10 @@ class TranslateService {
     
     private static let baseUrl = URL(string: "https://translation.googleapis.com/language/translate/v2")!
     private static let letterToTranslate = "?q"
-    private static var textToTranslate: String = " "
+    static var textToTranslate: String = " "
     private static let apiKeyParamKey: String = "key"
-    private static var langageToTranslate = "fr"
-    private static var targetLangage = "en"
+    static var languageToTranslate = "fr"
+    static var targetLanguage = "en"
     private static var formatText = "text"
     
     private var apiKey = ApiKeys()
@@ -38,27 +38,25 @@ class TranslateService {
     func changeTextUser(text: String) {
         TranslateService.textToTranslate = text
     }
-    func changeLangage(source: String, target: String) {
-        TranslateService.langageToTranslate = source
-        TranslateService.targetLangage = target
+    func changeLanguage(source: String, target: String) {
+        TranslateService.languageToTranslate = source
+        TranslateService.targetLanguage = target
     }
     
-    private func getUrl(for route: TranslateRoute) -> URL? {
+    private func getUrl(for route: TranslateRoute) -> URL {
         let escapedString = TranslateService.textToTranslate.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         var urlString = "\(TranslateService.baseUrl)\(route.rawValue)"
         let textsToTranslate = "\(TranslateService.letterToTranslate)=\(escapedString!)"
         let apiKeyParam = "\(TranslateService.apiKeyParamKey)=\(apiKey.keyTranslate!)"
-        let source = "source=\(TranslateService.langageToTranslate)"
-        let target = "target=\(TranslateService.targetLangage)"
+        let source = "source=\(TranslateService.languageToTranslate)"
+        let target = "target=\(TranslateService.targetLanguage)"
         let format = "format=\(TranslateService.formatText)"
         urlString = "\(TranslateService.baseUrl)\(textsToTranslate)&\(apiKeyParam)&\(source)&\(target)&\(format)"
-        return URL(string: urlString)
+        return URL(string: urlString)!
     }
     
     func getValue(callback: @escaping (Bool, Translate?) -> Void) {
-        guard let url = getUrl(for: .translate) else {
-            return
-        }
+        let url = getUrl(for: .translate)
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         task?.cancel()

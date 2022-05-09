@@ -24,7 +24,7 @@ class ChangeService {
     weak var delegate: ChangeServiceDelegage?
     private var apiKey = ApiKeys()
     
-    private var storedDollarRate: Float?
+    var storedDollarRate: Float?
     private var storedDateRate = userDefaultsDateKey
     // dependacy removal for tests
     private var session = URLSession(configuration: .default)
@@ -35,20 +35,18 @@ class ChangeService {
     
     private static let baseUrl = URL(string: "http://data.fixer.io/api/")!
     private static let apiKeyParamKey: String = "access_key"
-    private static let userDefaultsRateKey = "usdRateValue"
-    private static let userDefaultsDateKey = "usdRateDate"
+    static let userDefaultsRateKey = "usdRateValue"
+    static let userDefaultsDateKey = "usdRateDate"
     
-    private func getUrl(for route: ChangeRoute) -> URL? {
+    private func getUrl(for route: ChangeRoute) -> URL {
         var urlString = "\(ChangeService.baseUrl)\(route.rawValue)"
         let apiKeyParam = "\(ChangeService.apiKeyParamKey)=\(apiKey.keyChange!)"
         urlString = "\(urlString)?\(apiKeyParam)"
-        return URL(string: urlString)
+        return URL(string: urlString)!
     }
     
     func getValue(callback: @escaping (Bool, LatestRates?) -> Void) {
-        guard let url = getUrl(for: .latest) else {
-            return
-        }
+        let url = getUrl(for: .latest)
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         task?.cancel()

@@ -30,7 +30,7 @@ class WeatherService {
         self.session = session
     }
     
-    private func getUrl(for route: WeatherRoute, city: String) -> URL? {
+    private func getUrl(for route: WeatherRoute, city: String) -> URL {
         let cityEncoded = city.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         var urlString = "\(WeatherService.baseUrl)\(route.rawValue)"
         let cityMtp = "q=\(cityEncoded!)"
@@ -38,13 +38,11 @@ class WeatherService {
         let langParam = "lang=\(WeatherService.langValue)"
         let unitsParam = "\(WeatherService.units)=\(WeatherService.unitsValue)"
         urlString = "\(urlString)?\(cityMtp)&\(apiKeyParam)&\(langParam)&\(unitsParam)"
-        return URL(string: urlString)
+        return URL(string: urlString)!
     }
     
     func getValue(city: String, callback: @escaping(Bool, Weather?) -> Void) {
-        guard let url = getUrl(for: .weather, city: city) else {
-            return
-        }
+        let url = getUrl(for: .weather, city: city)
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         let task = session.dataTask(with: request) { data, response, error in

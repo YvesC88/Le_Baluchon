@@ -55,7 +55,7 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
             }, completion: nil)
             clearText()
             setupPlaceholderLabel()
-            translate.changeLangage(source: "fr", target: "en")
+            translate.changeLanguage(source: "fr", target: "en")
             langageToTranslateLabel.text = "Français"
             langageTranslatedLabel.text = "Anglais"
             return
@@ -65,7 +65,7 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         }, completion: nil)
         clearText()
         setupPlaceholderLabel()
-        translate.changeLangage(source: "en", target: "fr")
+        translate.changeLanguage(source: "en", target: "fr")
         langageToTranslateLabel.text = "Anglais"
         langageTranslatedLabel.text = "Français"
     }
