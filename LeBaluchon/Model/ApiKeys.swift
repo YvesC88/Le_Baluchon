@@ -12,8 +12,8 @@ class ApiKeys {
     var keyTranslate: String?
     var keyWeather: String?
     init () {
-        keyChange = "9aed9a78030804ff91257bc0eb7a1e4b"
-        keyTranslate = "AIzaSyAP2oCeWge5_NS_dEwX_QraoxOjhdWhkS4"
-        keyWeather = "ca60a34bad3b1b195395e74cf7b5bfda"
+        keyChange = ""
+        keyTranslate = ""
+        keyWeather = ""
     }
 }
