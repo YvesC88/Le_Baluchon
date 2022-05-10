@@ -78,12 +78,15 @@ class ChangeServiceTestCase: XCTestCase {
         }
         wait(for: [expectation], timeout: 0.01)
     }
-
+    
     func testGivenTextInTextToTranslate_WhenTapText_ThenShowingResult() {
+        let dateTimestamp = Date().timeIntervalSince1970 - 24.0*60.0*60.0
+        UserDefaults.standard.set(dateTimestamp, forKey: ChangeService.userDefaultsDateKey)
+        
         let changeService = ChangeService(session: URLSessionFake(data: FakeResponseData.changeCorrectData, response: FakeResponseData.responseOK, error: nil))
-
+        
         let expectation = XCTestExpectation(description: "Wait for queue change.")
-
+        
         changeService.fetchCurrentRate { rate, date in
             let lastRate: Float = 1.090667
             
@@ -99,20 +102,60 @@ class ChangeServiceTestCase: XCTestCase {
         
         XCTAssertNotNil(storedDollarRate)
     }
+    
+    func testCalculation() {
+        // Given
+        let changeService = ChangeService()
+        let dollarValue: Float = 1
+        
+        // When
+        let calculatedValue = changeService.calculation(value: dollarValue)
+        
+        // Then
+        XCTAssertNil(calculatedValue)
+    }
+    
+    func testCalculationWithRate() {
+        // Given
+        let changeService = ChangeService()
+        changeService.storedDollarRate = 2.4
+        let dollarValue: Float = 1
+        
+        // When
+        let calculatedValue = changeService.calculation(value: dollarValue)
+        
+        // Then
+        XCTAssertEqual(calculatedValue, 2.4)
+    }
+    
+    func testSaveCurrentRateWithoutRate() {
+        // Given
+        let changeService = ChangeService()
+        UserDefaults.standard.removeObject(forKey: ChangeService.userDefaultsRateKey)
+        UserDefaults.standard.removeObject(forKey: ChangeService.userDefaultsDateKey)
+        
+        // When
+        changeService.saveCurrentRate()
+        
+        // Then
+        let storedRate = UserDefaults.standard.float(forKey: ChangeService.userDefaultsRateKey)
+        let date = UserDefaults.standard.double(forKey: ChangeService.userDefaultsDateKey)
+        XCTAssertEqual(storedRate, 0)
+        XCTAssertEqual(date, 0)
+    }
+    
+    func testFetchCurrentRateWithSavedRateTimestamp() {
+        // Given
+        let changeService = ChangeService()
+        let currentTimestamp = Double(Int(Date().timeIntervalSince1970))
+        UserDefaults.standard.set(currentTimestamp, forKey: ChangeService.userDefaultsDateKey)
+        
+        // When
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        changeService.fetchCurrentRate { _, date in
+            XCTAssertEqual(date.timeIntervalSince1970, currentTimestamp)
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 1.00)
+    }
 }
-
-
-//func calculation(value: Float) -> Float? {
-//    guard let storedDollarRate = storedDollarRate else {
-//        return nil
-//    }
-//    return value * storedDollarRate
-//}
-
-//func saveCurrentRate() {
-//    guard let storedDollarRate = storedDollarRate else {
-//        return
-//    }
-//    UserDefaults.standard.set(storedDollarRate, forKey: ChangeService.userDefaultsRateKey)
-//    UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: ChangeService.userDefaultsDateKey)
-//}
