@@ -21,10 +21,7 @@ class ChangeRateViewController: UIViewController {
     // date and result formatting
     private var numberFormatter = NumberFormatter()
     private let dateFormatter = DateFormatter()
-    
-    private let changeService = ChangeService()
-    
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
         donateLatestRate()
@@ -51,7 +48,7 @@ class ChangeRateViewController: UIViewController {
             self.presentAlert(message: "Saisissez un nombre")
             return
         }
-        guard let convertedValue = changeService.calculation(value: userValue) else { return }
+        guard let convertedValue = ChangeService.shared.calculation(value: userValue) else { return }
         textViewUser.resignFirstResponder()
         decimalNumber()
         let formattedValue = NSNumber(value: convertedValue)
@@ -63,7 +60,7 @@ class ChangeRateViewController: UIViewController {
         textViewUser.text.removeAll()
     }
     private func donateLatestRate() {
-        changeService.fetchCurrentRate { rate, date in
+        ChangeService.shared.fetchCurrentRate { rate, date in
             guard let rate = rate else {
                 self.presentAlert(message: "Le téléchargement des données a échoué.")
                 return

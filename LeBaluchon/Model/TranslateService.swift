@@ -18,7 +18,7 @@ class TranslateService {
     
     private static let baseUrl = URL(string: "https://translation.googleapis.com/language/translate/v2")!
     private static let letterToTranslate = "?q"
-    static var textToTranslate: String = " "
+    static var textToTranslate: String = ""
     private static let apiKeyParamKey: String = "key"
     static var languageToTranslate = "fr"
     static var targetLanguage = "en"

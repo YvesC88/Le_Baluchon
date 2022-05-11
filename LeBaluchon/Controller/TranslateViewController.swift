@@ -18,8 +18,6 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var clearTextButton: UIButton!
     
     var placeholderLabel: UILabel!
-    let translate = TranslateService()
-    
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
         setupPlaceholderLabel()
@@ -55,7 +53,7 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
             }, completion: nil)
             clearText()
             setupPlaceholderLabel()
-            translate.changeLanguage(source: "fr", target: "en")
+            TranslateService.shared.changeLanguage(source: "fr", target: "en")
             langageToTranslateLabel.text = "Français"
             langageTranslatedLabel.text = "Anglais"
             return
@@ -65,7 +63,7 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         }, completion: nil)
         clearText()
         setupPlaceholderLabel()
-        translate.changeLanguage(source: "en", target: "fr")
+        TranslateService.shared.changeLanguage(source: "en", target: "fr")
         langageToTranslateLabel.text = "Anglais"
         langageTranslatedLabel.text = "Français"
     }
@@ -82,7 +80,7 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     @IBAction func tappedTranslate() {
         textToTranslateTextView.resignFirstResponder()
         toggleActivityIndicator(shown: true)
-        translate.changeTextUser(text: "\(textToTranslateTextView.text!)")
+        TranslateService.shared.changeTextUser(text: "\(textToTranslateTextView.text!)")
         if textToTranslateTextView.text == "" {
             self.presentAlert(message: "Veuillez saisir du texte")
             toggleActivityIndicator(shown: false)

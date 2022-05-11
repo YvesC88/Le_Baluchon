@@ -82,13 +82,14 @@ class TranslateServiceTestCase: XCTestCase {
     
     func testGivenTextInTextToTranslate_WhenTapText_ThenShowingResult() {
         TranslateService.shared.changeTextUser(text: "Bonjour")
-        
-        XCTAssert(TranslateService.textToTranslate == "Bonjour")
+
+        XCTAssertTrue(TranslateService.textToTranslate == "Bonjour")
     }
     
     func testGivenChangeSourceLanguage_WhenTapOnChangeLanguageButton_LanguageChanged() {
         TranslateService.shared.changeLanguage(source: "en", target: "fr")
 
-        XCTAssertEqual(TranslateService.languageToTranslate == "en", TranslateService.targetLanguage == "fr")
+        XCTAssertTrue(TranslateService.languageToTranslate == "en")
+        XCTAssertTrue(TranslateService.targetLanguage == "fr")
     }
 }

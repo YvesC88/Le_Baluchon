@@ -96,20 +96,12 @@ class ChangeServiceTestCase: XCTestCase {
         wait(for: [expectation], timeout: 0.01)
     }
     
-    func testGivenTextInTextToTranslate_WhenTapText_ThenShowingResult2() {
-        ChangeService.shared.saveCurrentRate()
-        let storedDollarRate: Float = 1.090667
-        
-        XCTAssertNotNil(storedDollarRate)
-    }
-    
     func testCalculation() {
         // Given
-        let changeService = ChangeService()
         let dollarValue: Float = 1
         
         // When
-        let calculatedValue = changeService.calculation(value: dollarValue)
+        let calculatedValue = ChangeService.shared.calculation(value: dollarValue)
         
         // Then
         XCTAssertNil(calculatedValue)
@@ -117,15 +109,14 @@ class ChangeServiceTestCase: XCTestCase {
     
     func testCalculationWithRate() {
         // Given
-        let changeService = ChangeService()
-        changeService.storedDollarRate = 2.4
-        let dollarValue: Float = 1
+        ChangeService.shared.storedDollarRate = 2.4
+        let dollarValue: Float = 2
         
         // When
-        let calculatedValue = changeService.calculation(value: dollarValue)
+        let calculatedValue = ChangeService.shared.calculation(value: dollarValue)
         
         // Then
-        XCTAssertEqual(calculatedValue, 2.4)
+        XCTAssertEqual(calculatedValue, 4.8)
     }
     
     func testSaveCurrentRateWithoutRate() {
@@ -146,13 +137,12 @@ class ChangeServiceTestCase: XCTestCase {
     
     func testFetchCurrentRateWithSavedRateTimestamp() {
         // Given
-        let changeService = ChangeService()
         let currentTimestamp = Double(Int(Date().timeIntervalSince1970))
         UserDefaults.standard.set(currentTimestamp, forKey: ChangeService.userDefaultsDateKey)
-        
+
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
-        changeService.fetchCurrentRate { _, date in
+        ChangeService.shared.fetchCurrentRate { _, date in
             XCTAssertEqual(date.timeIntervalSince1970, currentTimestamp)
             expectation.fulfill()
         }

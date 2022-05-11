@@ -12,16 +12,11 @@ enum ChangeRoute: String {
     case latest
 }
 
-protocol ChangeServiceDelegage: AnyObject {
-    func textUser(value: String)
-}
-
 class ChangeService {
     static var shared = ChangeService()
     init() {}
     
     private var task: URLSessionDataTask?
-    weak var delegate: ChangeServiceDelegage?
     private var apiKey = ApiKeys()
     
     var storedDollarRate: Float?
